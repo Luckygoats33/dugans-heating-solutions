@@ -270,7 +270,19 @@
       .banner, .sticky-cta, header.nav { display: none !important; }
       body { background: #fff; color: #000; }
     }
-  </style>
+  
+.swg-photos { padding: 2.4rem 0 3rem; }
+.swg-photos .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+.swg-photos h2 { margin: 0 0 .35rem; font-size: clamp(1.4rem, 3vw, 2rem); }
+.swg-photos .note { margin: 0 0 1rem; font-size: .85rem; opacity: .8; max-width: 60ch; }
+.swg-photos .hero-shot img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; display: block; background: #222; }
+.swg-photos .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; margin-top: 1rem; }
+.swg-photos figure { margin: 0; }
+.swg-photos figure img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; display: block; background: #222; }
+.swg-photos figcaption { font-size: .72rem; margin-top: .4rem; opacity: .75; }
+@media (max-width: 720px) { .swg-photos .grid { grid-template-columns: 1fr; } }
+
+</style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -303,16 +315,16 @@
       <div class="wrap">
         <p class="kicker"><i></i> Residential heating · Astoria, OR</p>
         <h1>Heat for a Columbia River winter.</h1>
-        <p class="lede">Dugan’s Heating Solutions is a local heating contractor at 1394 8th Street. There is no official website on file — this preview exists so you can call, check the license, and find the shop.</p>
+        <p class="lede">Dugan’s Heating Solutions is a local heating contractor at 1394 8th Street, Astoria. This independent preview exists so you can call, check the Oregon CCB license, and find the shop.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="tel:+15033383884">Call (503) 338-3884</a>
           <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Dugan%27s+Heating+Solutions%2C+1394+8th+St%2C+Astoria%2C+OR">Open in Google Maps</a>
         </div>
         <div class="trust" aria-label="Trust signals">
-          <div class="chip"><b>~5.0 on Google</b><span>About 23 public reviews</span></div>
           <div class="chip"><b>CCB #196144</b><span>Oregon license, verified</span></div>
           <div class="chip"><b>Since 2012</b><span>Oregon registration on file</span></div>
           <div class="chip"><b>1394 8th St</b><span>Astoria, OR 97103</span></div>
+          <div class="chip"><b>(503) 338-3884</b><span>Call to confirm details</span></div>
         </div>
       </div>
     </section>
@@ -347,7 +359,28 @@
       </div>
     </section>
 
-    <section class="light" id="services">
+    
+  <section class="swg-photos" aria-labelledby="photos-h">
+    <div class="wrap">
+      <h2 id="photos-h">Job photos</h2>
+      <p class="note">Wood-stove shots are public job photos. Furnace image is stock.</p>
+      <div class="hero-shot">
+        <img src="images/stove.webp" alt="Public job photo of a wood stove installation" width="1600" height="900" fetchpriority="high" decoding="async">
+      </div>
+      <div class="grid">
+      <figure>
+        <img src="images/finish.webp" alt="Finished install — public job photo" width="1200" height="900" loading="lazy" decoding="async">
+        <figcaption>Finished install — public job photo</figcaption>
+      </figure>
+      <figure>
+        <img src="images/furnace.webp" alt="Furnace equipment (stock)" width="1200" height="900" loading="lazy" decoding="async">
+        <figcaption>Furnace equipment (stock)</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="light" id="services">
       <div class="wrap">
         <p class="section-label">Work</p>
         <h2>Typical heating jobs — confirm by phone.</h2>
@@ -393,11 +426,10 @@
     <section class="slate" id="reviews">
       <div class="wrap">
         <p class="section-label">Reputation</p>
-        <h2>Google listings show about five stars.</h2>
-        <p class="stars" aria-hidden="true">★★★★★</p>
-        <p class="review-box">Recent public listings put Dugan’s Heating Solutions around <strong>5.0 stars from about 23 Google reviews</strong>. This preview does not invent quotes, photos, or a review count more precise than that. Read the current reviews on Google Maps.</p>
+        <h2>Check current reviews on Google Maps.</h2>
+        <p class="review-box">This preview does not republish star ratings, review counts, or customer quotes. For the latest public feedback, open the Google Maps listing and read what’s there today.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Dugan%27s+Heating+Solutions%2C+1394+8th+St%2C+Astoria%2C+OR">Read Google reviews</a>
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Dugan%27s+Heating+Solutions%2C+1394+8th+St%2C+Astoria%2C+OR">Open Google Maps listing</a>
         </div>
       </div>
     </section>
@@ -427,8 +459,8 @@
   </main>
   <footer class="site">
     <div class="wrap">
-      <p>© 2026 Heating Solutions LLC · DBA Dugan’s Heating Solutions · Astoria, Oregon · CCB #196144</p>
-      <p class="fine">Independent client preview prepared for discussion. Not affiliated as the official website of the business. No hours, email, emergency service, financing, or extra locations were added. License details were checked against Oregon’s CCB Active Licenses dataset (license 196144, Heating Solutions LLC, 1394 8th Street, Astoria). Google rating shown as an approximate public figure. Confirm every fact with the contractor and the CCB before you hire.</p>
+      <p>© 2026 Heating Solutions LLC · DBA Dugan’s Heating Solutions · 1394 8th St, Astoria, OR 97103 · <a href="tel:+15033383884">(503) 338-3884</a> · CCB #196144</p>
+      <p class="fine">Independent client preview prepared for discussion. Not affiliated as the official website of the business. No hours, email, emergency service, financing, star ratings, or extra locations were added. License details were checked against Oregon’s CCB Active Licenses dataset (license 196144, Heating Solutions LLC, 1394 8th Street, Astoria). Confirm every fact with the contractor and the CCB before you hire.</p>
     </div>
   </footer>
   <div class="sticky-cta">
